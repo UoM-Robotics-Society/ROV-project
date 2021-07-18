@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name TC4424AVOA)(type Legacy)(uri ${KIPRJMOD}/extra/TC4424AVOA.mod)(options "")(descr ""))
+  (lib (name extra)(type KiCad)(uri ${KIPRJMOD}/extra.pretty)(options "")(descr ""))
+  (lib (name TMCS1100A2QDR)(type Legacy)(uri ${KIPRJMOD}/extra/TMCS1100A2QDR.mod)(options "")(descr ""))
+)

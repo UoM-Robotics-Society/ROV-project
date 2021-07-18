@@ -1,0 +1,121 @@
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                margin : 0;
+            }
+        </style>
+        <title>IMU</title>
+    </head>
+    <link rel="stylesheet" href="../static/dat.gui.css">
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script src="../static/stats.js"></script>
+    <script src="../static/dat.gui.min.js"></script>
+    <script src="../static/OrbitControls.js"></script>
+    <!--
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    -->
+    <script>
+        function createArrow(color)
+        {
+
+            const bottomArrow = new THREE.CylinderGeometry(0.1, 0.1, 4,32);
+            const material = new THREE.MeshBasicMaterial( {color : color} );
+            const stick = new THREE.Mesh( bottomArrow, material );
+            const topArrow = new THREE.ConeGeometry(.5, 1, 32);
+            const cone = new THREE.Mesh(topArrow, material);
+
+            let mesh = new THREE.Object3D();
+            cone.position.set(0, 2, 0);
+            mesh.add(stick);
+            mesh.add(cone);
+
+            return mesh;
+        }
+
+        function createAxis()
+        {
+            let redArrow = createArrow(0xff0000);
+            let greenArrow = createArrow(0x00ff00);
+            let blueArrow = createArrow(0x0000ff);
+
+            redArrow.rotation.z = -Math.PI / 2;
+            redArrow.position.x = 2;
+
+            greenArrow.position.y = 2;
+
+            blueArrow.rotation.x = Math.PI / 2;
+            blueArrow.position.z = 2;
+
+            let axis = new THREE.Object3D();
+            axis.add(redArrow);
+            axis.add(greenArrow);
+            axis.add(blueArrow);
+
+            return axis;
+        }
+
+
+        const scene    = new THREE.Scene();
+        const camera   = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+
+        var stats = new Stats();
+        stats.showPanel(1);
+
+        const gui = new dat.GUI();
+        var data = new function()
+        {
+            this.rotationSpeed = 0.0;
+        }
+        gui.add(data, 'rotationSpeed', 0, 0.5);
+
+
+        controls = new THREE.OrbitControls( camera, renderer.domElement );
+        controls.listenToKeyEvents( window ); // optional
+        controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+        controls.dampingFactor = 0.05;
+        controls.screenSpacePanning = false;
+        controls.minDistance = 10;
+        controls.maxDistance = 50;
+        controls.maxPolarAngle = Math.PI / 2;
+
+
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+        document.body.append(stats.dom);
+
+
+
+        let axis = createAxis();
+        scene.add(axis);
+
+        //const axesHelper = new THREE.AxesHelper(5);
+        //scene.add(axesHelper);
+
+        camera.position.z = 5;
+
+        const animate = function () {
+
+            stats.begin();
+            axis.rotation.x += data.rotationSpeed;
+            axis.rotation.y += data.rotationSpeed;
+
+            renderer.render( scene, camera );
+            controls.update();
+            stats.end();
+
+            requestAnimationFrame( animate );
+        };
+
+        animate();
+
+    </script>
+</body>
+</html>

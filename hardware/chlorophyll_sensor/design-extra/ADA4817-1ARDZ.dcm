@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADA4817-1ARDZ
+D Op Amp Low Noise 1GHz FastFET 8SOIC-EP Analog Devices ADA4817-1ARDZ High Speed Op Amp, 410MHz Rail-Rail, 5  10 V, 8-Pin SOIC
+K
+F http://at.rs-online.com/webdocs/10ad/0900766b810adb57.pdf
+$ENDCMP
+#
+#End Doc Library

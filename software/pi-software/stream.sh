@@ -1,0 +1,1 @@
+raspivid -o - -t 0 -w 720 -h 480 -fps 30 -b 2000000 | cvlc -vvv stream:///dev/stdin --sout '#rtp{sdp=rtsp://:8554/camera}'

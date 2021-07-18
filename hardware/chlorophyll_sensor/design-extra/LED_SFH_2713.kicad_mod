@@ -1,0 +1,72 @@
+
+(module LED_SFH_2713 (layer F.Cu) (tedit 60BBBB58)
+  (descr "")
+  (fp_text reference REF** (at 0.69 -2.038 0) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.015)))
+  )
+  (fp_text value LED_SFH_2713 (at 4.246 2.048 0) (layer F.Fab)
+    (effects (font (size 0.8 0.8) (thickness 0.015)))
+  )
+  (fp_line (start 0.65 1.0) (end -0.65 1.0) (layer F.SilkS) (width 0.127))
+  (fp_line (start -0.65 -1.0) (end 0.65 -1.0) (layer F.SilkS) (width 0.127))
+  (fp_line (start 1.85 1.25) (end -1.85 1.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1.85 1.25) (end -1.85 -1.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1.85 -1.25) (end 1.85 -1.25) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.85 -1.25) (end 1.85 1.25) (layer F.CrtYd) (width 0.05))
+  (fp_circle (center 2.2 0.05) (end 2.3 0.05) (layer F.SilkS) (width 0.2))
+  (fp_circle (center 2.2 0.05) (end 2.3 0.05) (layer F.Fab) (width 0.2))
+  (fp_line (start 1.6 1.0) (end 1.6 -1.0) (layer F.Fab) (width 0.127))
+  (fp_line (start 1.6 -1.0) (end -1.6 -1.0) (layer F.Fab) (width 0.127))
+  (fp_line (start -1.6 -1.0) (end -1.6 1.0) (layer F.Fab) (width 0.127))
+  (fp_line (start -1.6 1.0) (end 1.6 1.0) (layer F.Fab) (width 0.127))
+  (fp_poly
+    (pts
+      (xy 1.0 -0.95)
+      (xy 1.5 -0.95)
+      (xy 1.5 0.95)
+      (xy 1.0 0.95)
+    ) (layer F.Mask) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -1.5 -0.95)
+      (xy -1.0 -0.95)
+      (xy -1.0 0.95)
+      (xy -1.5 0.95)
+    ) (layer F.Mask) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 1.05 0.15)
+      (xy 1.45 0.15)
+      (xy 1.45 0.9)
+      (xy 1.05 0.9)
+    ) (layer F.Paste) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy 1.05 -0.9)
+      (xy 1.45 -0.9)
+      (xy 1.45 -0.15)
+      (xy 1.05 -0.15)
+    ) (layer F.Paste) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -1.45 0.15)
+      (xy -1.05 0.15)
+      (xy -1.05 0.9)
+      (xy -1.45 0.9)
+    ) (layer F.Paste) (width 0.01)
+  )
+  (fp_poly
+    (pts
+      (xy -1.45 -0.9)
+      (xy -1.05 -0.9)
+      (xy -1.05 -0.15)
+      (xy -1.45 -0.15)
+    ) (layer F.Paste) (width 0.01)
+  )
+  (pad A smd rect (at -1.25 0.0) (size 0.5 1.9) (layers F.Cu))
+  (pad C smd rect (at 1.25 0.0) (size 0.5 1.9) (layers F.Cu))
+)

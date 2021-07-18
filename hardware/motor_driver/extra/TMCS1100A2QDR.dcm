@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TMCS1100A2QDR
+D Board Mount Current Sensors Precision isolated current sensor with external reference
+K
+F https://www.ti.com/lit/gpn/TMCS1100
+$ENDCMP
+#
+#End Doc Library

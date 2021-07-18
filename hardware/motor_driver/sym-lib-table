@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name motor_driver_v1-rescue)(type Legacy)(uri ${KIPRJMOD}/motor_driver_v1-rescue.lib)(options "")(descr ""))
+  (lib (name TC4424AVOA)(type Legacy)(uri ${KIPRJMOD}/extra/TC4424AVOA.lib)(options "")(descr ""))
+)
