@@ -1,11 +1,15 @@
 "use strict";
 
-const socket = io();
 
-socket.on("connect", () =>
-{
-   socket.send("Hello !");
-});
+var socket = io();
+    socket.on('connect', function() {
+        socket.emit('my event', {data: 'I\'m connected!'});
+    });
+
+
+let r=0, i=0, j=0, k=0;
+
+
 
 socket.on("data", data => {
     console.log(data);
