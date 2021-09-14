@@ -16,3 +16,4 @@
 |Cabel Length|Bandidth|
 |---|---|
 |0.25m|942 Mbits/sec|
+|20m|940 Mbits/sec|
