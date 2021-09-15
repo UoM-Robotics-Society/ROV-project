@@ -22,6 +22,7 @@
     -->
     <script>
         let HZ = 30;
+        r=0, i=0, j=0, k=0, rp = 0, ip = 0, jp = 0, kp = 0;
 
         console.log("ASDASDASD");
 
@@ -32,7 +33,7 @@
         });
 
 
-        let r=0, i=0, j=0, k=0;
+        r=0, i=0, j=0, k=0;
         socket.on("data", data => {
          if (data["r"] != null)
              r = data["r"];
@@ -42,7 +43,18 @@
              j = data["j"];
          if (data["k"] != null)
              k = data["k"];
-            console.log(r, i, j, k);
+         
+        rp=0, ip=0, jp=0, kp=0;
+         if (data["rp"] != null)
+             rp = data["rp"];
+         if (data["ip"] != null)
+             ip = data["ip"];
+         if (data["jp"] != null)
+             jp = data["jp"];
+         if (data["kp"] != null)
+             kp = data["kp"];
+        
+            //console.log(r, i, j, k);
         });
 
         var _ = window.setInterval(function()
@@ -54,11 +66,11 @@
         function createArrow(color)
         {
 
-            const bottomArrow = new THREE.CylinderGeometry(0.1, 0.1, 4,32);
-            const material = new THREE.MeshBasicMaterial( {color : color} );
-            const stick = new THREE.Mesh( bottomArrow, material );
-            const topArrow = new THREE.ConeGeometry(.5, 1, 32);
-            const cone = new THREE.Mesh(topArrow, material);
+            let bottomArrow = new THREE.CylinderGeometry(0.1, 0.1, 3, 32);
+            let material = new THREE.MeshBasicMaterial( {color : color ,opacity : 0.25, transparent : true } );
+            let stick = new THREE.Mesh( bottomArrow, material );
+            let topArrow = new THREE.ConeGeometry(.5, 1, 32);
+            let cone = new THREE.Mesh(topArrow, material);
 
             let mesh = new THREE.Object3D();
             cone.position.set(0, 2, 0);
@@ -68,19 +80,20 @@
             return mesh;
         }
 
-        function createAxis()
+        function createAxis(x_color = 0xff0000, y_color = 0x00ff00, z_color = 0xf0000ff)
         {
-            let redArrow = createArrow(0xff0000);
-            let greenArrow = createArrow(0x00ff00);
-            let blueArrow = createArrow(0x0000ff);
+            let redArrow = createArrow(x_color);
+            let greenArrow = createArrow(y_color);
+            let blueArrow = createArrow(z_color);
 
             redArrow.rotation.z = -Math.PI / 2;
-            redArrow.position.x = 2;
+            redArrow.position.x = 1.5;
 
-            greenArrow.position.y = 2;
+            greenArrow.position.y = 1.5;
 
             blueArrow.rotation.x = Math.PI / 2;
-            blueArrow.position.z = 2;
+            blueArrow.position.z = 1.5;
+            
 
             let axis = new THREE.Object3D();
             axis.add(redArrow);
@@ -102,8 +115,12 @@
         var data = new function()
         {
             this.rotationSpeed = 0.0;
+            this.BNO085 = true;
+            this.OwnFilter = false;
         }
         gui.add(data, 'rotationSpeed', 0, 0.5);
+        gui.add(data, "BNO085");
+        gui.add(data,  "OwnFilter");
 
 
         controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -123,11 +140,14 @@
 
 
 
-        let axis = createAxis();
-        scene.add(axis);
+        let axes = createAxis();
+        let axesp = createAxis(0x00ffff, 0xff00ff, 0xffff00);
+        
+        scene.add(axes);
+        scene.add(axesp);
 
-        //const axesHelper = new THREE.AxesHelper(5);
-        //scene.add(axesHelper);
+        const axesHelper = new THREE.AxesHelper(5);
+        scene.add(axesHelper);
 
         camera.position.z = 5;
 
@@ -135,10 +155,22 @@
 
             stats.begin();
 
-            axis.setRotationFromQuaternion(new THREE.Quaternion(i, j, k, r));
+            axes.setRotationFromQuaternion(new THREE.Quaternion(r, i, j, k));
+            axesp.setRotationFromQuaternion(new THREE.Quaternion(rp, ip, jp, kp));
 
             renderer.render( scene, camera );
             controls.update();
+
+            if (data.BNO085 != axis.visible)
+            {
+                axis.visible = data.BNO085;
+            }
+
+            if (data.OwnFilter != axisp.visible)
+            {
+                axisp.visible = data.OwnFilter;
+            }
+
             stats.end();
 
             requestAnimationFrame( animate );
