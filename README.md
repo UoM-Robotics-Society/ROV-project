@@ -34,16 +34,16 @@ Whole system of the ROV is presented on the image below :
 
 
 ### Motors
-- Lots of possible choices. For now we settled for [TODO add reference/description]. Custom driver created for the motors using Hbridge circuit. Main drawback is that we need to solder/design/debug it but advantage is that it provides quite a bit of extra features that we included in our design : overcurrent protection ( using polyfuse ), high amperage and reasonably low power losses ( dependent on mosfets ), protection of Microcontroller pins ( using Mosfet driver to drive large mosfets from Hbridge) and current monitoring ( output voltage of TMCS1100 sensor is proportional to the current that flows through the mosfets). All of the features could possibly help us debugging, monitoring and hopefully help with safety when dealing with large motors.
+- Lots of possible choices ( We orderd the dual shaft ,mabuchi like(DC motor),~30W from robotshop). Custom driver created for the motors using Hbridge circuit. Main drawback is that we need to solder/design/debug it but advantage is that it provides quite a bit of extra features that we included in our design : overcurrent protection ( using polyfuse ), high amperage and reasonably low power losses ( dependent on mosfets ), protection of Microcontroller pins ( using Mosfet driver to drive large mosfets from Hbridge) and current monitoring ( output voltage of TMCS1100 sensor is proportional to the current that flows through the mosfets). All of the features could possibly help us debugging, monitoring and hopefully help with safety when dealing with large motors.
 -  Possibility of adding encoders in the future 
 
 ### Sensors 
 - Other than driving platform we wanted to provide range of measurements:
   -  Temperature sensor is standard. 
   -  Pressure sensor is not popular sensor, designed specifically for underwater environment ( up to 300m ) which provides high resolution ( and it's low cost compared to other underwater sensors ). 
-  -  MARG sensor ( accelerometer, gyroscope, magnetometer). Using the data we can use AHRS algorithm ( experimented with Madgwick Filter which will be probably used in the design) we can visualize the orientation of the ROV on display on the laptop / ground station [TODO point to document with more details].
+  -  MARG sensor ( accelerometer, gyroscope, magnetometer). Using the data we can use AHRS algorithm ( experimented with Madgwick Filter which will be probably used in the design) we can visualize the orientation of the ROV on display on the laptop / ground station [Madgwick Report](https://www.x-io.co.uk/res/doc/madgwick_internal_report.pdf).
   -  Chlorophyll sensor. Custom sensor using the fluorescence measurement that should allow us to estimate the chlorophyll concentration. Chlorophyll concentration helps scientists to estimate health of the lake/other water containers [TODO point to document with more details].
-  -  Radiation sensor : was in the first design because of [TODO  why ?]. Seems like challenging project and cool expansion to the project. Initial design created from the Elektor magazine article about Radiation detection [TODO point to document with more details].#
+  -  Radiation sensor : was in the first design because of initial project idea from Sellafield. Seems like challenging project and cool expansion to the project. Initial design created from the Elektor magazine article about Radiation detection. General reference used for it was "Radiation detection and measurement" and [opengeiger](http://www.opengeiger.de/index_en.html) website
 
 ## Mechanical Design 
 ### Design
