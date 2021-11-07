@@ -1,0 +1,8 @@
+(fp_lib_table
+  (lib (name stm32-black-pill)(type KiCad)(uri ${KIPRJMOD}/stm32-black-pill.pretty)(options "")(descr ""))
+  (lib (name BMI088)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/mod/BMI088.mod)(options "")(descr ""))
+  (lib (name BMP390)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/mod/BMP390.mod)(options "")(descr ""))
+  (lib (name IIS2DLPCTR)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/mod/IIS2DLPCTR.mod)(options "")(descr ""))
+  (lib (name RASPBERRY_PI_4B_+_Samtec_ESP-1)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/mod/RASPBERRY_PI_4B_+_Samtec_ESP-1.mod)(options "")(descr ""))
+  (lib (name mod)(type KiCad)(uri /home/acze/Desktop/PROJS/G4Board/board-v3/mod)(options "")(descr ""))
+)

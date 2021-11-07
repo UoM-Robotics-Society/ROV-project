@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name RASPBERRY_PI_4B_+_Samtec_ESP-1)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/lib/RASPBERRY_PI_4B_+_Samtec_ESP-1.lib)(options "")(descr ""))
+  (lib (name IIS2DLPCTR)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/lib/IIS2DLPCTR.lib)(options "")(descr ""))
+  (lib (name BMP390)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/lib/BMP390.lib)(options "")(descr ""))
+  (lib (name BMI088)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/lib/BMI088.lib)(options "")(descr ""))
+  (lib (name CH340E)(type Legacy)(uri /home/acze/Desktop/PROJS/drone/hardware/extra/lib/CH340E.lib)(options "")(descr ""))
+  (lib (name stm32f411-black-pill)(type Legacy)(uri ${KIPRJMOD}/stm32f411-black-pill.lib)(options "")(descr ""))
+)

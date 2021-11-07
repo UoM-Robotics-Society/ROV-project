@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BMI088
+D Inertial Measurement Unit Digital Output 2.5V/3.3V Automotive
+K
+F https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMI088-DS001-13.pdf
+$ENDCMP
+#
+#End Doc Library

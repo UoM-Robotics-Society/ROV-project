@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name LTC6242HVCGN#PBF)(type Legacy)(uri /home/acze/Desktop/PROJS/radiation_sensor/extra/mod/LTC6242HVCGN#PBF.mod)(options "")(descr ""))
+)

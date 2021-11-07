@@ -1,0 +1,9 @@
+(fp_lib_table
+  (lib (name RASPBERRY_PI_4B_+_Samtec_ESP-1)(type Legacy)(uri ${KIPRJMOD}/mod/RASPBERRY_PI_4B_+_Samtec_ESP-1.mod)(options "")(descr ""))
+  (lib (name BMI088)(type Legacy)(uri ${KIPRJMOD}/mod/BMI088.mod)(options "")(descr ""))
+  (lib (name FSM4JH)(type Legacy)(uri ${KIPRJMOD}/mod/FSM4JH.mod)(options "")(descr ""))
+  (lib (name STM32G431C6T6)(type Legacy)(uri ${KIPRJMOD}/mod/STM32G431C6T6.mod)(options "")(descr ""))
+  (lib (name IIS2MDCTR)(type Legacy)(uri ${KIPRJMOD}/mod/IIS2MDCTR.mod)(options "")(descr ""))
+  (lib (name LSM303AGRTR)(type Legacy)(uri ${KIPRJMOD}/mod/LSM303AGRTR.mod)(options "")(descr ""))
+  (lib (name mod)(type KiCad)(uri ${KIPRJMOD}/mod)(options "")(descr ""))
+)

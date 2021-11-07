@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name bluePillG-rescue)(type Legacy)(uri ${KIPRJMOD}/bluePillG-rescue.lib)(options "")(descr ""))
+  (lib (name RASPBERRY_PI_4B_+_Samtec_ESP-1)(type Legacy)(uri ${KIPRJMOD}/lib/RASPBERRY_PI_4B_+_Samtec_ESP-1.lib)(options "")(descr ""))
+  (lib (name BMI088)(type Legacy)(uri ${KIPRJMOD}/lib/BMI088.lib)(options "")(descr ""))
+  (lib (name LSM303AGRTR)(type Legacy)(uri ${KIPRJMOD}/lib/LSM303AGRTR.lib)(options "")(descr ""))
+  (lib (name IIS2MDCTR)(type Legacy)(uri ${KIPRJMOD}/lib/IIS2MDCTR.lib)(options "")(descr ""))
+)

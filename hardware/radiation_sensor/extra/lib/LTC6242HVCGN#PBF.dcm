@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC6242HVCGN#PBF
+D LINEAR TECHNOLOGY - LTC6242HVCGN#PBF - IC, OP AMP, 18MHZ R/R, SMD, SSOP16
+K
+F http://cds.linear.com/docs/en/datasheet/624012fe.pdf
+$ENDCMP
+#
+#End Doc Library

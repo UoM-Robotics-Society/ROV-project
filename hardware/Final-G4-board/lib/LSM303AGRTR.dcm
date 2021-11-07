@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LSM303AGRTR
+D STMICROELECTRONICS - LSM303AGRTR - MEMS, 3D ACCELERO/MAGNETO, LGA-12
+K
+F http://www.st.com/content/ccc/resource/technical/document/datasheet/74/c4/19/54/62/c5/46/13/DM00177685.pdf/files/DM00177685.pdf/jcr:content/translations/en.DM00177685.pdf
+$ENDCMP
+#
+#End Doc Library
