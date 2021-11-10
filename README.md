@@ -49,6 +49,10 @@ Raspberry pi connected to laptop over 20 meter ethernet cable. Currently just st
 
 Current microcontroller board :<br>
 ![STM32 G4 board](imgs/stm32.gif)
+<br><br>
+Render of the final board that will go hopefully in the final design
+![STM32 G4 board](imgs/final-ROV-design.png)
+
 
 ### Motors
 - Lots of possible choices ( We orderd the dual shaft ,mabuchi like(DC motor),~30W from robotshop). Custom driver created for the motors using Hbridge circuit. Main drawback is that we need to solder/design/debug it but advantage is that it provides quite a bit of extra features that we included in our design : overcurrent protection ( using polyfuse ), high amperage and reasonably low power losses ( dependent on mosfets ), protection of Microcontroller pins ( using Mosfet driver to drive large mosfets from Hbridge) and current monitoring ( output voltage of TMCS1100 sensor is proportional to the current that flows through the mosfets). All of the features could possibly help us debugging, monitoring and hopefully help with safety when dealing with large motors.
