@@ -14,6 +14,13 @@ Goal is to create Remotely Operated Vehicle for underwater environments. ROV sho
 Whole system of the ROV is presented on the image below :
 ![diagram](docs/ROV-diagram.png)
 
+## Mechanical Design 
+### Design
+![video of the model render](imgs/Video_Model.gif)
+
+### Waterproofing
+
+
 ### Components Description 
 #### Ground Station
 - Main device with which User will interact will be laptop ( or other device to which we can connect Ethernet cable and will provide easy interaction ). Using laptop/other workstation provides few benefits : 
@@ -62,8 +69,3 @@ Chlorophyll sensor : <br>
 Pressure Sensor : <br>
 ![Pressure sensor](imgs/Pressure.resized.jpg)
 
-## Mechanical Design 
-### Design
-
-
-### Waterproofing
