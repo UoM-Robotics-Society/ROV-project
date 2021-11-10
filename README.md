@@ -18,6 +18,10 @@ Whole system of the ROV is presented on the image below :
 ### Design
 ![video of the model render](imgs/Video_Model.gif)
 
+![stiched images of the mode](imgs/render/result.jpg)
+
+
+whole mechanical design is done by mechanical team of ROV team  
 ### Waterproofing
 
 
