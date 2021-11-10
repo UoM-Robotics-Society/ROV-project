@@ -1,3 +1,0 @@
-/home/acze/Desktop/PROJS/ROV-project/software/STM32F4-software/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/acze/Desktop/PROJS/ROV-project/software/STM32F4-software/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/acze/Desktop/PROJS/ROV-project/software/STM32F4-software/cmake-build-debug/CMakeFiles/STM32F4-software.elf.dir
