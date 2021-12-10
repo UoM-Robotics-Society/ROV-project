@@ -1998,7 +1998,7 @@
   )
   (gr_line (start 95.999999 108.749999) (end 144.75 108.75) (layer Edge.Cuts) (width 0.05) (tstamp 616DAFBA))
   (gr_arc (start 95.75 104) (end 91.000001 104.249999) (angle -90) (layer Edge.Cuts) (width 0.05))
-  (gr_text "RoboSoc Drone" (at 125 106.5) (layer F.SilkS)
+  (gr_text "ROV PROJECT" (at 125 106.5) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_line (start 91 46.25) (end 91 104.25) (layer Edge.Cuts) (width 0.12) (tstamp 616CDBB1))

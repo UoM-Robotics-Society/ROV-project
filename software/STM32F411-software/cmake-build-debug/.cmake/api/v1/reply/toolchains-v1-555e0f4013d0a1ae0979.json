@@ -1,0 +1,91 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : {},
+				"path" : "/usr/bin/arm-none-eabi-gcc",
+				"version" : ""
+			},
+			"language" : "ASM",
+			"sourceFileExtensions" : 
+			[
+				"s",
+				"S",
+				"asm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/usr/lib/gcc/arm-none-eabi/9.2.1/include",
+						"/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed",
+						"/usr/lib/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "/usr/bin/arm-none-eabi-gcc",
+				"version" : "9.2.1"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/usr/lib/arm-none-eabi/include/c++/9.2.1",
+						"/usr/lib/arm-none-eabi/include/c++/9.2.1/arm-none-eabi",
+						"/usr/lib/arm-none-eabi/include/c++/9.2.1/backward",
+						"/usr/lib/gcc/arm-none-eabi/9.2.1/include",
+						"/usr/lib/gcc/arm-none-eabi/9.2.1/include-fixed",
+						"/usr/lib/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "/usr/bin/arm-none-eabi-g++",
+				"version" : "9.2.1"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

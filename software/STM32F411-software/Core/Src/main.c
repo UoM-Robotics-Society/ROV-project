@@ -52,6 +52,8 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN PV */
+char command[4];
+char return_msg[4];
 
 /* USER CODE END PV */
 
@@ -73,7 +75,26 @@ static void MX_USART6_UART_Init(void);
 /* USER CODE BEGIN 0 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
-    HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+
+}
+
+void decodeMessage()
+{
+
+    return_msg[0] = 0;
+    return_msg[1] = 0;
+    return_msg[2] = 0;
+    return_msg[3] = 0;
+
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    decodeMessage();
+
+
+//    HAL_UART_Transmit(&huart1, (uint8_t *)command, 4, HAL_MAX_DELAY);
+    HAL_UART_Receive_IT(&huart1, (uint8_t *)return_msg, 4);
 }
 /* USER CODE END 0 */
 
@@ -121,9 +142,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
+  HAL_UART_Receive_IT(&huart1, (uint8_t *)command, 4);
+
   while (1)
   {
-
+      HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 

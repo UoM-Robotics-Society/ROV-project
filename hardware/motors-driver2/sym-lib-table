@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TC4424AVOA)(type Legacy)(uri ${KIPRJMOD}/extra/KiCad/TC4424AVOA.lib)(options "")(descr ""))
+)
