@@ -1,7 +1,0 @@
-(fp_lib_table
-  (lib (name TC4424AVOA)(type Legacy)(uri ${KIPRJMOD}/extra/TC4424AVOA.mod)(options "")(descr ""))
-  (lib (name extra)(type KiCad)(uri ${KIPRJMOD}/extra.pretty)(options "")(descr ""))
-  (lib (name TMCS1100A2QDR)(type Legacy)(uri ${KIPRJMOD}/extra/TMCS1100A2QDR.mod)(options "")(descr ""))
-  (lib (name motors-v1)(type KiCad)(uri /home/acze/Desktop/PROJS/motors-v1)(options "")(descr ""))
-  (lib (name extra_1)(type KiCad)(uri ${KIPRJMOD}/extra)(options "")(descr ""))
-)

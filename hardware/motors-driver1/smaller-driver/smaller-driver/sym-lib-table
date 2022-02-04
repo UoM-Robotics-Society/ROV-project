@@ -1,5 +1,0 @@
-(sym_lib_table
-  (lib (name TC4424AVOA)(type Legacy)(uri /home/acze/Desktop/PROJS/motors-v1/extra/TC4424AVOA.lib)(options "")(descr ""))
-  (lib (name TMCS1100A2QDR)(type Legacy)(uri /home/acze/Desktop/PROJS/motors-v1/extra/TMCS1100A2QDR.lib)(options "")(descr ""))
-  (lib (name TC4425AVOA)(type Legacy)(uri /home/acze/Desktop/PROJS/motors-v1/extra/TC4425AVOA.lib)(options "")(descr ""))
-)
