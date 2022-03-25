@@ -6,7 +6,7 @@ import paho.mqtt.client as mqtt
 from time import time
 import pybase64
 
-ip_address = "192.168.1.86"
+ip_address = "10.42.0.113"
 jpg_image = ""
 tp = 0
 N = 30
@@ -41,8 +41,7 @@ def on_message(client, userdata, msg):
 
 
 def MQTT_run():
-    global tp
-    ip_address = "192.168.1.86"
+    global tp, ip_address
     client = mqtt.Client()
     client.on_connect = on_connect
     client.on_message = on_message

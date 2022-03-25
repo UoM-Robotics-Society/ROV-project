@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/175/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/184/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/175/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/184/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/acze/Desktop/PROJS/ROV-project/software/STM32F411-softw
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/184/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/184/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -128,6 +128,30 @@ STM32F411-software.elf: cmake_check_build_system
 STM32F411-software.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F411-software.elf.dir/build.make CMakeFiles/STM32F411-software.elf.dir/build
 .PHONY : STM32F411-software.elf/fast
+
+Core/Src/communication.obj: Core/Src/communication.c.obj
+.PHONY : Core/Src/communication.obj
+
+# target to build an object file
+Core/Src/communication.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F411-software.elf.dir/build.make CMakeFiles/STM32F411-software.elf.dir/Core/Src/communication.c.obj
+.PHONY : Core/Src/communication.c.obj
+
+Core/Src/communication.i: Core/Src/communication.c.i
+.PHONY : Core/Src/communication.i
+
+# target to preprocess a source file
+Core/Src/communication.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F411-software.elf.dir/build.make CMakeFiles/STM32F411-software.elf.dir/Core/Src/communication.c.i
+.PHONY : Core/Src/communication.c.i
+
+Core/Src/communication.s: Core/Src/communication.c.s
+.PHONY : Core/Src/communication.s
+
+# target to generate assembly for a file
+Core/Src/communication.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STM32F411-software.elf.dir/build.make CMakeFiles/STM32F411-software.elf.dir/Core/Src/communication.c.s
+.PHONY : Core/Src/communication.c.s
 
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
@@ -746,6 +770,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... STM32F411-software.elf"
+	@echo "... Core/Src/communication.obj"
+	@echo "... Core/Src/communication.i"
+	@echo "... Core/Src/communication.s"
 	@echo "... Core/Src/main.obj"
 	@echo "... Core/Src/main.i"
 	@echo "... Core/Src/main.s"

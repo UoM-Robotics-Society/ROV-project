@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-5.11.0-41-generic")
+set(CMAKE_HOST_SYSTEM "Linux-5.13.0-30-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "5.11.0-41-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "5.13.0-30-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 

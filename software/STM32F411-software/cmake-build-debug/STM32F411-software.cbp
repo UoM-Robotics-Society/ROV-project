@@ -96,6 +96,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/acze/Desktop/PROJS/ROV-project/software/STM32F411-software/Core/Inc/communication.h">
+			<Option target="STM32F411-software.elf"/>
+		</Unit>
 		<Unit filename="/home/acze/Desktop/PROJS/ROV-project/software/STM32F411-software/Core/Inc/main.h">
 			<Option target="STM32F411-software.elf"/>
 		</Unit>
@@ -103,6 +106,9 @@
 			<Option target="STM32F411-software.elf"/>
 		</Unit>
 		<Unit filename="/home/acze/Desktop/PROJS/ROV-project/software/STM32F411-software/Core/Inc/stm32f4xx_it.h">
+			<Option target="STM32F411-software.elf"/>
+		</Unit>
+		<Unit filename="/home/acze/Desktop/PROJS/ROV-project/software/STM32F411-software/Core/Src/communication.c">
 			<Option target="STM32F411-software.elf"/>
 		</Unit>
 		<Unit filename="/home/acze/Desktop/PROJS/ROV-project/software/STM32F411-software/Core/Src/main.c">

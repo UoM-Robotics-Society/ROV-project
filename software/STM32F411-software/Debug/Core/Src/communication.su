@@ -1,0 +1,2 @@
+../Core/Src/communication.c:6:17:getPeripheral	16	static
+../Core/Src/communication.c:13:6:decodeMessage	24	static

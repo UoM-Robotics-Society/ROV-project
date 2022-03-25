@@ -30,3 +30,56 @@
 |0x01, 0b00000000, 0x00, 0x00| write x to motor channel 0|motor write 0 0 x| 
 |0x01, 0b00000001, 0x00, 0x00| write x to motor channel 1|motor write 0 1 x| 
 |0x01, 0b00000010, 0x00, 0x00| write x to motor channel 2|motor write 0 2 x| 
+
+    STM32 Config
+        Channel : 0
+            description : Echo back the message
+        Channel : 1
+            description : Toggle LED
+            data:
+                0 : turn off the LED
+                1 : turn on  the LED
+                2 : toggle the LED 
+        Channel : 2
+            description:
+    Motor Control:
+        Channel : 0
+            description : Thruster nr 1
+            Type:
+                0 : write value to CRT
+                1 : data represents x / 10000 of duty cycle ( max x = 10000. 100% duty cycle
+                2 : set frequency
+            data:
+                interpretation dependent on type above
+        Channel : 1
+            description : Thruster nr 2
+            Type:
+                0 : write value to CRT
+                1 : data represents x / 10000 of duty cycle ( max x = 10000. 100% duty cycle
+                2 : set frequency
+            data:
+                interpretation dependent on type above
+        Channel : 2
+            description : Thruster nr 3
+            Type:
+                0 : write value to CRT
+                1 : data represents x / 10000 of duty cycle ( max x = 10000. 100% duty cycle
+                2 : set frequency
+            data:
+                interpretation dependent on type above
+        Channel : 3
+            description : Thruster nr 4
+            Type:
+                0 : write value to CRT
+                1 : data represents x / 10000 of duty cycle ( max x = 10000. 100% duty cycle
+                2 : set frequency
+            data:
+                interpretation dependent on type above
+    LED Control:
+        Channel 0:
+            description : control of while LED 1 
+            Type : 
+                0 : write value to CRT
+                1 : 
+            data:
+                decrpition: interpretation depends on the type 
